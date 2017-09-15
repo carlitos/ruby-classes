@@ -7,7 +7,7 @@ class Dog
   end
 
   def to_s
-    "#{@name} is a #{@breed} and he is doing: #{bark}"
+    "#{@name} is a #{@breed}: #{bark}"
   end
 
   def bark
@@ -15,8 +15,10 @@ class Dog
   end
 end
 
-my_dog = Dog.new("Chester", "Labrador")
-puts my_dog.name
-puts my_dog.breed
-puts my_dog.bark
-puts my_dog
+if __FILE__ == $0
+  my_dog = Dog.new("Chester", "Labrador")
+  puts my_dog.name
+  puts my_dog.breed
+  puts my_dog.bark
+  puts my_dog
+end
