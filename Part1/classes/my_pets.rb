@@ -9,9 +9,11 @@ class MyPets
   def to_s
     puts "Hi! My pets are:"
     puts " Dogs ".center(50, '*')
-    puts @dogs
+    puts "Nombre del Perro: " + @dogs[0].name
+    puts "Salud del perro #{@dogs[0].health}"
     puts " Cats ".center(50, '*')
-    puts @cats
+    puts "Nombre del Gato; " + @cats[0].name
+    puts "Salud del gato #{@cats[0].health}"
   end
 
   def add_dog(name, breed)
