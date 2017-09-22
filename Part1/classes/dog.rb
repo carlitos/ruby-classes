@@ -1,18 +1,23 @@
-class Dog
-  attr_reader :name, :breed
+# Importar clase
+require_relative 'pet'
+
+class Dog < Pet
+  attr_accessor :breed
 
   def initialize(name, breed)
-    @name = name.capitalize
+    super(name)
     @breed = breed
-  end
 
-  def to_s
-    "#{@name} is a #{@breed}: #{bark}"
   end
 
   def bark
     "Woof Woof"
   end
+
+  def sound
+    bark
+  end
+
 end
 
 if __FILE__ == $0

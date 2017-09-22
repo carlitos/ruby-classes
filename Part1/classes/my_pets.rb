@@ -20,6 +20,20 @@ class MyPets
   def add_cat(name)
     @cats << Cat.new(name)
   end
+  def perro
+    @dogs[0]
+  end
+  def gato
+    @cats[0]
+  end
+  def dog_attack
+    perro.bonus
+    gato.damage
+  end
+  def cat_attack
+    gato.bonus
+    perro.damage
+  end
 end
 
 pets = MyPets.new
